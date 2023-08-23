@@ -79,12 +79,11 @@ outline-style: none;
   background-color: white;
   color: green;
 }
-.FoodCardContainer{
-  height: calc(100vh-200px);
+.FoodCardContainer {
+  height: calc(100vh - 200px); 
   background-image: url(./image/wallpaperflare.com_wallpaper\ \(1\).jpg);
   background-size: cover;
 }
-/* Cart.css */
 
 
 .FoodCards {
