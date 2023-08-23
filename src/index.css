@@ -1,13 +1,176 @@
-body {
+*{
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+}
+body{
+  background-color: #323334;
+  color: white;
+  min-height: 100vh;
+}
+.loogo img{
+  width: 55px;
+  height: 40px;
+  padding-right: 1rem;
+}
+.Container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.loader {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left: 4px solid green;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-top: -25px;
+  margin-left: -25px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
+
+
+.TopContainer{
+  min-height: 140px;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+  align-items: center;
+}
+.green{
+  color: green;
+}
+.search input{
+  background-color: transparent;
+  border: 1px solid green;
+  color: white;
+  border-radius: 5px;
+  height: 40px;
+font-size: 17px;
+padding:0 4px;
+outline-style: none;
+}
+.FilterContainer{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 20px;
+}
+.btn{
+  background-color:green;
+  border-radius: 5px;
+  padding: 5px 11px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.btn.active {
+  background-color: white;
+  color: green;
+}
+.FoodCardContainer{
+  height: calc(100vh-200px);
+  background-image: url(./image/wallpaperflare.com_wallpaper\ \(1\).jpg);
+  background-size: cover;
+}
+/* Cart.css */
+
+
+.FoodCards {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 32px;
+  column-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.FoodCard {
+  width: 340px;
+  height: 167px;
+  border: 0.66px solid;
+  border-image-source: radial-gradient(
+    80.69% 208.78% at 108.28% 112.58%,
+    #eabfff 0%,
+    rgba(135, 38, 183, 0) 100%
+  ), radial-gradient(
+    80.38% 222.5% at -13.75% -12.36%,
+    #98f9ff 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
+  background-blend-mode: overlay, normal;
+  backdrop-filter: blur(13.1842px);
+  border-radius: 20px;
+  display: flex;
+  padding: 8px;
+}
+.FoodCard .foodImage{
+  border-radius: 40%;
+  width: 40%;
+ height: 90%;
+ padding-right: 1rem;
+}
+.FoodCard .food_info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.FoodCard .food_info h3 {
+  margin-top: 8px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.FoodCard .food_info p {
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 1.5em; 
+  max-height: 6em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.FoodCard .food_info button {
+  font-size: 12px;
+}
+@media (0 < width < 600px) {
+  body{
+    width: 90vw;
+  }
+  .Container{
+   flex-direction: column;
+   width: 100vw;
+   height: 120px;
+   .TopContainer{
+     flex-direction: column;
+     width: 100vw;
+     height: 120px;
+   }
+
+  }
+ }
+ @media (0 < width < 400px) {
+   .FilterContainer{
+     flex-direction: column;
+     width: 100vw;
+     height: 120px;
+   }
+ }
