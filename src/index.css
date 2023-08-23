@@ -84,7 +84,7 @@ outline-style: none;
   color: green;
 }
 .FoodCardContainer {
-  height: calc(100vh - 200px); 
+  height:100%;
   background-image: url(./image/wallpaperflare.com_wallpaper\ \(1\).jpg);
   background-size: cover;
   border-radius: 20px;
@@ -99,7 +99,7 @@ outline-style: none;
   column-gap: 20px;
   justify-content: center;
   align-items: center;
-  padding-top: 80px;
+  padding:50px 0;
 }
 
 .FoodCard {
@@ -169,3 +169,4 @@ outline-style: none;
      height: 100px;
    }
  }
+
