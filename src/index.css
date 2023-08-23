@@ -80,7 +80,7 @@ outline-style: none;
   color: green;
 }
 .FoodCardContainer {
-  height: calc(100vh - 200px); 
+  height: calc(100% - 200px); 
   background-image: url(./image/wallpaperflare.com_wallpaper\ \(1\).jpg);
   background-size: cover;
 }
