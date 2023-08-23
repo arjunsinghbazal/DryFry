@@ -25,7 +25,7 @@ function App() {
       console.log(data)
       console.log(filter)
     } catch (error) {
-      setError("Unable to fetch the data");
+      setError("Unable to fectch the data");
     } finally {
       setLoading(false);
     }
@@ -65,7 +65,6 @@ function App() {
 
 
 
-  if (error) return <div>{error}</div>;
   if (loading) return <div className="loader"></div>;
 
   return (
@@ -120,7 +119,7 @@ function App() {
 </button>
 
       </section>
-      <Cart data={filter} />
+      <Cart data={filter} error={error}/>
     </div>
   );
 }
