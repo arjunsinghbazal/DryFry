@@ -1,22 +1,33 @@
 *{
-  box-sizing: border-box;
+  
   margin: 0;
   padding: 0;
 }
 body{
   background-color: #323334;
   color: white;
-  min-height: 100vh;
+  min-height: 100%;
+  width: 100%;
+}
+.Container{
+  width: 100vw;
+  margin: 0 auto;
+}
+
+.TopContainer{
+  min-height: 100px;
+  width: calc(100%-36px);
+  display: flex;
+  justify-content: space-between;
+  padding:0 36px;
+  align-items: center;
 }
 .loogo img{
   width: 55px;
-  height: 40px;
+  height: 45px;
   padding-right: 1rem;
 }
-.Container{
-  max-width: 1200px;
-  margin: 0 auto;
-}
+
 .loader {
   border: 4px solid rgba(0, 0, 0, 0.1);
   border-left: 4px solid green;
@@ -41,13 +52,6 @@ body{
 }
 
 
-.TopContainer{
-  min-height: 140px;
-  display: flex;
-  justify-content: space-between;
-  padding: 16px;
-  align-items: center;
-}
 .green{
   color: green;
 }
@@ -65,7 +69,7 @@ outline-style: none;
   display: flex;
   justify-content: center;
   gap: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 40px;
 }
 .btn{
   background-color:green;
@@ -80,41 +84,34 @@ outline-style: none;
   color: green;
 }
 .FoodCardContainer {
-  height: calc(100vh - 200px); 
+  width: 100%;
+  min-height: 100vh;
+  height: 100%; 
   background-image: url(./image/wallpaperflare.com_wallpaper\ \(1\).jpg);
   background-size: cover;
 }
 
 
 .FoodCards {
+  width: 100vw;
   display: flex;
   flex-wrap: wrap;
   row-gap: 32px;
   column-gap: 20px;
   justify-content: center;
   align-items: center;
-  padding-top: 80px;
+  padding: 50px 0;
 }
 
 .FoodCard {
   width: 340px;
   height: 167px;
   border: 0.66px solid;
-  border-image-source: radial-gradient(
-    80.69% 208.78% at 108.28% 112.58%,
-    #eabfff 0%,
-    rgba(135, 38, 183, 0) 100%
-  ), radial-gradient(
-    80.38% 222.5% at -13.75% -12.36%,
-    #98f9ff 0%,
-    rgba(255, 255, 255, 0) 100%
-  );
-
   background-blend-mode: overlay, normal;
   backdrop-filter: blur(13.1842px);
   border-radius: 20px;
   display: flex;
-  padding: 8px;
+  padding: 9px;
 }
 .FoodCard .foodImage{
   border-radius: 40%;
@@ -157,19 +154,19 @@ outline-style: none;
   .Container{
    flex-direction: column;
    width: 100vw;
-   height: 120px;
+   height: 120px; }
    .TopContainer{
      flex-direction: column;
      width: 100vw;
      height: 120px;
    }
 
-  }
+  
  }
  @media (0 < width < 400px) {
    .FilterContainer{
      flex-direction: column;
-     width: 100vw;
-     height: 120px;
+     padding-top: 1rem;
+     height: 100px;
    }
  }
