@@ -27,7 +27,6 @@ useEffect(()=>{
                  <div> <button className="btn">Price {prices[value.idCategory]} INR</button>
                   <button className="btn" onClick={()=>setOrder(value.idCategory)}>Order</button></div>
 
-                  <button className="btn">Price {prices[value.idCategory]} INR</button>
 
                 </div>
               </div>
