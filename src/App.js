@@ -8,9 +8,9 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route exact path='/' element={<Home />} /> 
-        <Route path='/checkout' element={<Checkout />} /> 
-        <Route path='/thank' element={<ThankYou/>}/>
+        <Route exact path='/' Component={Home} /> 
+        <Route path='/checkout' Component={Checkout} /> 
+        <Route path='/thank' Component={ThankYou}/>
       </Routes>
     </Router>
 
