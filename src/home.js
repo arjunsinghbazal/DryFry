@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom"; 
 import logo from "./image/clipart1129793.png";
 import "./App.css";
 import Cart from "./Cart";
-import { useNavigate } from "react-router-dom"; // Corrected import
 
 
 const url = "https://www.themealdb.com/api/json/v1/1/categories.php";
@@ -104,7 +104,7 @@ function Home() {
             />
             <div className="count-box">
         {count>0?<p className="count">{count}</p>:null}
-        <img src={logo} alt="404" onClick={()=> navigate("/checkout")} className="cart-image" />
+        <img src={logo} alt="404" onClick={()=> navigate("/check")} className="cart-image" />
       </div>
           </div>
         </section>

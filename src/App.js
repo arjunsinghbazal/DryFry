@@ -9,7 +9,7 @@ function App() {
     <Router>
       <Routes>
         <Route exact path='/' Component={Home} /> 
-        <Route path='/checkout' Component={Checkout} /> 
+        <Route path='/check' Component={Checkout} /> 
         <Route path='/thank' Component={ThankYou}/>
       </Routes>
     </Router>
