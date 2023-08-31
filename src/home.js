@@ -27,6 +27,9 @@ function Home() {
         const responseData = await response.json();
         const categories = responseData.categories;
         setData(categories);
+        if (data) {
+            localStorage.setItem("data", JSON.stringify(data));
+          }
         setFilter(categories);
         console.log(data)
         console.log(filter)
@@ -66,11 +69,9 @@ function Home() {
 
     useEffect(() => {
         fetchData();
-        if (data.length > 0) {
-            localStorage.setItem("data", JSON.stringify(data));
-          }
+       
         }
-      , [fetchData]);
+      , []);
       
      
     useEffect(()=>{
