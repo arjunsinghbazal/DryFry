@@ -226,13 +226,7 @@ body{
   flex-direction: row;
   justify-content: space-between;
 }
-.head button{
-  background-color: none;
-  border: none;
-  font-size: large;
-  font-weight: 600;
-  cursor: pointer;
-}
+
 .checkout-items {
   border: 1px solid #ccc;
   padding: 10px;
