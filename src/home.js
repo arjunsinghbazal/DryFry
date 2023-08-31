@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom"; 
+
 import { Link } from "react-router-dom";
 import logo from "./image/clipart1129793.png";
 import "./App.css";
@@ -9,7 +9,7 @@ import Cart from "./Cart";
 const url = "https://www.themealdb.com/api/json/v1/1/categories.php";
 
 function Home() {
-    const navigate=useNavigate();
+    
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
     const [value, setValue] = useState("");
@@ -25,11 +25,8 @@ function Home() {
       try {
         const response = await fetch(url);
         const responseData = await response.json();
-        const categories = responseData.categories;
+        const categories =await responseData.categories;
         setData(categories);
-        if (data) {
-            localStorage.setItem("data", JSON.stringify(data));
-          }
         setFilter(categories);
         console.log(data)
         console.log(filter)
@@ -65,15 +62,12 @@ function Home() {
     const showAllItems = () => {
       setFilter(data);
     };
-  
-
     useEffect(() => {
         fetchData();
-       
         }
       , []);
       
-     
+      localStorage.setItem("data", JSON.stringify(data));
     useEffect(()=>{
         const storedData = localStorage.getItem("orders");
     if (storedData) {
