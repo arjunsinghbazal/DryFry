@@ -186,7 +186,10 @@ body{
    flex-direction: column;
     max-width: 90%;
     margin: 0 auto;
+<<<<<<< HEAD
     margin-top: 2rem;
+=======
+>>>>>>> a91178f7fed4e3cc6dbb4201dc16f234d57dae44
    height: 120px; }
    .TopContainer{
    
