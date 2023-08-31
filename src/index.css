@@ -1,15 +1,16 @@
 *{
-  
   margin: 0;
   padding: 0;
 }
 body{
   background-color: #323334;
   color: white;
+  width: 95vw;
 }
 .Container{
-  max-width: 100vw;
+  max-width: 90%;
   margin: 0 auto;
+  
 }
 
 .TopContainer{
@@ -53,16 +54,46 @@ body{
 .green{
   color: green;
 }
-.search input{
+.search {
+  display: flex;
+  align-items: center; /* Vertically align items */
+}
+
+.search input {
   background-color: transparent;
   border: 1px solid green;
   color: white;
   border-radius: 5px;
   height: 40px;
-font-size: 17px;
-padding:0 4px;
-outline-style: none;
+  font-size: 17px;
+  padding: 0 4px;
+  outline-style: none;
 }
+
+.search img {
+  box-shadow: 20px 20px 50px 10px rgb(106, 61, 61) inset;
+  width: 25px;
+  margin-left: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.count-box{
+  position: relative;
+}
+.count{
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: green;
+  color: white;
+  border-radius: 50%;
+  padding: 3px 6px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+
+
 .FilterContainer{
   width: 100%;
 
@@ -78,6 +109,7 @@ outline-style: none;
   color: white;
   border: none;
   cursor: pointer;
+  margin-left: 0.4rem;
 }
 .btn.active {
   background-color: white;
@@ -147,10 +179,14 @@ outline-style: none;
   font-size: 12px;
 }
 @media (0 < width < 600px) {
+  body{
+    max-width: 90vh;
+  }
   .Container{
    flex-direction: column;
     max-width: 90%;
     margin: 0 auto;
+    margin-top: 2rem;
    height: 120px; }
    .TopContainer{
    
@@ -162,7 +198,7 @@ outline-style: none;
     flex-direction: column;
     padding-top: 1rem;
     height: 100px;
-    width: 90%;
+    width: 100%;
   }
   .FoodCardContainer{
     max-width: 100%;
@@ -176,3 +212,79 @@ outline-style: none;
      width: 100%;
    }
  }
+ /* Checkout.css */
+.checkout-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.head{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.head button{
+  background-color: none;
+  border: none;
+  font-size: large;
+  font-weight: 600;
+  cursor: pointer;
+}
+.checkout-items {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin:1rem 0;
+}
+
+.checkout-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.category-name {
+  font-weight: bold;
+}
+
+.total-price {
+  margin-top: 20px;
+  text-align: right;
+  font-weight: bold;
+}
+
+/* Add other styles as needed */
+.checkout-buttons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin:1rem 0;
+}
+.pay-now-button {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.cancel-order-button {
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+
+.thank-you-container {
+  text-align: center;
+  margin: 20px;
+  margin-top: 2rem;
+}
+
+.emoji {
+  font-size: 48px;
+  margin-top: 10px;
+}

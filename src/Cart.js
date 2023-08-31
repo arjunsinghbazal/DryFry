@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Cart = ({ data, error }) => {
   const prices = [120, 230, 330, 430, 540, 299, 199, 600, 499, 100, 444, 33, 222, 523, 287];
-  
+const [Data,setData]=useState([]);
+
+  const setOrder = (index) => {
+    setData((prevData) => [...prevData, index]); 
+  };
+
+
+useEffect(()=>{
+  localStorage.setItem("orders", JSON.stringify(Data));
+},[Data])
   return (
     <section className="FoodCardContainer">
       <div className="FoodCards">
@@ -14,7 +23,8 @@ const Cart = ({ data, error }) => {
                 <div className="food_info">
                   <h3>{value.strCategory}</h3>
                   <p>{value.strCategoryDescription}</p>
-                  <button className="btn">Price {prices[value.idCategory]} INR</button>
+                 <div> <button className="btn">Price {prices[value.idCategory]} INR</button>
+                  <button className="btn" onClick={()=>setOrder(value.idCategory)}>Order</button></div>
                 </div>
               </div>
             )
