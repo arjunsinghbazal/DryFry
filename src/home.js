@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"; 
+import { Link } from "react-router-dom";
 import logo from "./image/clipart1129793.png";
 import "./App.css";
 import Cart from "./Cart";
@@ -104,7 +105,7 @@ function Home() {
             />
             <div className="count-box">
         {count>0?<p className="count">{count}</p>:null}
-        <img src={logo} alt="404" onClick={()=> navigate("/check")} className="cart-image" />
+        <Link to={"/check"}><img src={logo} alt="404"  className="cart-image" /></Link>
       </div>
           </div>
         </section>
