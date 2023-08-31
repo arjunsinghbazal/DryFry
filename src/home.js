@@ -73,7 +73,7 @@ function Home() {
             localStorage.setItem("data", JSON.stringify(data));
           }
         }
-      , []);
+      , [data,fetchData]);
       
      
     useEffect(()=>{
