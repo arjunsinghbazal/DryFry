@@ -52,7 +52,7 @@ const Checkout = () => {
           </div>
         </>
       ) : (
-        <h1>Your Cart is Empty</h1>
+        <h1 className="red">Your Cart is Empty</h1>
       )}
     </div>
   );

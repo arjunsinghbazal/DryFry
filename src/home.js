@@ -35,10 +35,6 @@ function Home() {
         setLoading(false);
       }
     };
-  const navigatetoCart=(e)=>{
-    e.preventDefault()
-    navigate("/checkout")
-  }
     const handleVegClick=()=>{
       const filterVegData=data.filter(items=>VegCategories.includes(items.strCategory))
       setFilter(filterVegData)
@@ -108,7 +104,7 @@ function Home() {
             />
             <div className="count-box">
         {count>0?<p className="count">{count}</p>:null}
-        <img src={logo} alt="404" onClick={navigatetoCart} className="cart-image" />
+        <img src={logo} alt="404" onClick={()=> navigate("/checkout")} className="cart-image" />
       </div>
           </div>
         </section>
