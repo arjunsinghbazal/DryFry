@@ -202,6 +202,7 @@ body{
   }
   .FoodCardContainer{
     max-width: 100%;
+    background-image: none;
   }
  }
  @media (0 < width < 400px) {
